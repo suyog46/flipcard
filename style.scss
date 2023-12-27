@@ -1,0 +1,40 @@
+.catb {
+    width: 255px;
+    height: 300px;
+    // border:1px solid black;
+    &:hover .catb-inner{
+        transform: rotateY(180deg);
+    }
+    .catb-inner{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition:  1s;
+        transform-style:preserve-3d;
+      
+        .catb-front {
+            background: linear-gradient(rgba(1, 15, 27, 0.397), rgba(3, 43, 78, 0.404)), url('/cat1.jpg');
+            position: absolute;
+            background-size:cover;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            h1{
+                color:white;
+                
+            }
+        }
+        .catb-back {
+    border:1px solid black;
+            transform: rotateY(180deg);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            backface-visibility: hidden;
+            p{
+                color:white;
+            }
+        }
+    }
+}
